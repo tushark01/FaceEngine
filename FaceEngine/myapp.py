@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st 
 from PIL import Image,ImageEnhance
 
-st.markdown(f'<p style="font-family:Georgia; text-align:center; color:#09ff00; font-size:40px; border-radius:2%;"> <b>Face Engine</b> </p>' , unsafe_allow_html=True)
+st.markdown(f'<p style="font-family:Serif; text-align:center; color:#09ff00; font-size:40px; border-radius:2%;"> <b>Face Engine</b> </p>' , unsafe_allow_html=True)
 
 @st.cache
 def load_image(img):
@@ -20,8 +20,10 @@ def detect_faces(our_image):
 	img = cv2.cvtColor(new_img,1)
 	gray = cv2.cvtColor(new_img, cv2.COLOR_BGR2GRAY)
 
-	# *Detect faces
+	#!Detect faces
 	faces = face_cascade.detectMultiScale(gray, 1.1, 4)
+
+	
 	# *Draw rectangle around the faces
 	for (x, y, w, h) in faces:
 				 cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
@@ -94,7 +96,7 @@ def main():
 			#! st.write(type(our_image))
 			#! st.image(our_image, width=300)
 
-			enhance_type = st.sidebar.radio("Enhance Type",["Original","Gray-Scale","Contrast","Brightness","Blurring"])
+			enhance_type = st.sidebar.radio("Enhance Type",["Original","Gray-Scale","Contrast","Brightness","Blurring","Sharpening"])
 			if enhance_type == 'Gray-Scale':
 				st.text("Gray-Scaled Image")
 				new_img = np.array(our_image.convert('RGB'))
@@ -130,6 +132,16 @@ def main():
 				blur_img = cv2.GaussianBlur(img,(11,11),blur_rate)
 				st.image(blur_img, width=300)
 				st.markdown(f'`Blur strength is : {blur_rate}`')
+				
+
+			elif enhance_type == 'Sharpening':
+				st.text("Image Sharpening")
+				new_img = np.array(our_image.convert('RGB'))
+				sharp = st.sidebar.slider("Sharpening",0.0,5.4, 0.3)
+				img = cv2.cvtColor(new_img,1)
+				sharpened1 = cv2.addWeighted(img, 7.5, cv2.GaussianBlur(img,(7,7),255), -6.5, 0)
+				st.image(sharpened1, width=300)
+				st.markdown(f'`Sharpening strength is : {sharp}`')
 
 
 			elif enhance_type == 'Original':
