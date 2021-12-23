@@ -4,6 +4,7 @@ FaceEngine - An Image Processing Python-streamlit app for performing different i
 - Increase or decrease contrast-
 - Brightness control
 - Blurring Image.
+- Sharpening an Image.
 
 Also Using this we can perform following this :
 -Faces Detection
