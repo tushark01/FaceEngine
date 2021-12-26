@@ -12,13 +12,14 @@ __________________________
 * Now Play with images !
 
 
-![Screenshot 2021-12-23 163225](https://user-images.githubusercontent.com/70583158/147231978-0398d3e0-a2a0-43aa-9dab-e80ff811dcc5.png)
+
+![Screenshot 2021-12-26 124123](https://user-images.githubusercontent.com/70583158/147401514-7af4e458-ab10-4662-9240-eb5846f18b9a.png)
 
 __________________________
 
 ## About Project
 
-### It a multipurpose FaceApp using which we can perform different things on  an Image like :-
+### It a multipurpose Face Engine using which we can perform different things on  an Image like :-
 
 - Color to gray scale Image
 - Increase or decrease contrast
