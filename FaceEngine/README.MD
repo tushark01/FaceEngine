@@ -7,7 +7,7 @@ __________________________
 
 * Clone this repo into your local machine.
 * Install all the required libraries.
-* Type "streamlit run myapp.py" to run this project files. 
+* Type "streamlit run test.py" to run this project files. 
 * Now visit to the URL, which is present in terminal.
 * Now Play with images !
 
@@ -24,6 +24,7 @@ __________________________
 - Increase or decrease contrast
 - Brightness control
 - Blurring Image
+- Pencil Sketch
 
 ______________________________
 
