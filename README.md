@@ -5,6 +5,7 @@ FaceEngine - An Image Processing Python-streamlit app for performing different i
 - Brightness control
 - Blurring Image.
 - Sharpening an Image.
+- Pencil Sketch
 
 Also Using this we can perform following this :
 -Faces Detection
