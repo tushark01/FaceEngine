@@ -25,6 +25,7 @@ __________________________
 - Increase or decrease contrast
 - Brightness control
 - Blurring Image
+- Sharpening
 - Pencil Sketch
 
 ______________________________
