@@ -3,7 +3,7 @@ import numpy as np
 import streamlit as st 
 from PIL import Image,ImageEnhance
 
-st.markdown(f'<p style="font-family:Serif; text-align:center; color:#09ff00; font-size:40px; border-radius:2%;"> <b>Face Engine</b> </p>' , unsafe_allow_html=True)
+st.markdown(f'<p style="font-family:Serif; text-align:center; color:#09ff00; font-size:60px; border-radius:2%;"> <b>Face Engine</b> </p>' , unsafe_allow_html=True)
 
 @st.cache
 def load_image(img):
@@ -26,7 +26,7 @@ def detect_faces(our_image):
     
     # *Draw rectangle around the faces
     for (x, y, w, h) in faces:
-                 cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
+                 cv2.rectangle(img, (x, y), (x+w, y+h), (0, 255, 0), 2)
     return img, faces 
 
 
