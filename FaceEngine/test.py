@@ -153,7 +153,7 @@ def main():
                 
             elif enhance_type == 'Pencil Sketch':
                 st.text("Pencil Sketch")
-                img_gray = np.array(our_image.convert('RGB'))
+                img_gray = np.array(our_image.convert('L'))
                 img_invert = cv2.bitwise_not(img_gray)
                 img_smoothing = cv2.GaussianBlur(img_invert, (21, 21),sigmaX=0, sigmaY=0)
                 def dodgeV2(x, y):
